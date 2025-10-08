@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Las 7 Maravillas del Mundo</h2>
+<p>Conoce las maravillas modernas del mundo y su historia.</p>
+
+<img src="{{ url_for('static', filename='img/maravilla1.jpg') }}" alt="Maravilla 1">
+<img src="{{ url_for('static', filename='img/maravilla2.jpg') }}" alt="Maravilla 2">
+<img src="{{ url_for('static', filename='img/maravilla3.jpg') }}" alt="Maravilla 3">
+<img src="{{ url_for('static', filename='img/maravilla4.jpg') }}" alt="Maravilla 4">
+<img src="{{ url_for('static', filename='img/maravilla5.jpg') }}" alt="Maravilla 5">
+<img src="{{ url_for('static', filename='img/maravilla6.jpg') }}" alt="Maravilla 6">
+<img src="{{ url_for('static', filename='img/maravilla7.jpg') }}" alt="Maravilla 7">
+{% endblock %}

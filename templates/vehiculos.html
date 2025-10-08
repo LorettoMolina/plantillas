@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Vehículos Antiguos</h2>
+<p>Descubre la historia del nacimiento de los vehículos y algunos modelos clásicos.</p>
+
+<img src="{{ url_for('static', filename='img/vehiculo1.jpg') }}" alt="Vehículo 1">
+<img src="{{ url_for('static', filename='img/vehiculo2.jpg') }}" alt="Vehículo 2">
+<img src="{{ url_for('static', filename='img/vehiculo3.jpg') }}" alt="Vehículo 3">
+<img src="{{ url_for('static', filename='img/vehiculo4.jpg') }}" alt="Vehículo 4">
+<img src="{{ url_for('static', filename='img/vehiculo5.jpg') }}" alt="Vehículo 5">
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Animales Exóticos</h2>
+<p>El reino animal es asombroso. Aquí encontrarás algunos animales acuáticos, terrestres y aéreos fascinantes.</p>
+
+<h3>Acuáticos</h3>
+<img src="{{ url_for('static', filename='img/acuatico1.jpg') }}" alt="Animal acuático 1">
+<img src="{{ url_for('static', filename='img/acuatico2.jpg') }}" alt="Animal acuático 2">
+
+<h3>Terrestres</h3>
+<img src="{{ url_for('static', filename='img/terrestre1.jpg') }}" alt="Animal terrestre 1">
+<img src="{{ url_for('static', filename='img/terrestre2.jpg') }}" alt="Animal terrestre 2">
+
+<h3>Aéreos</h3>
+<img src="{{ url_for('static', filename='img/aereo1.jpg') }}" alt="Animal aéreo 1">
+<img src="{{ url_for('static', filename='img/aereo2.jpg') }}" alt="Animal aéreo 2">
+{% endblock %}
