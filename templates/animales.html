@@ -1,17 +1,44 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<h2>Animales Exóticos</h2>
-<p>El reino animal es asombroso. Aquí encontrarás algunos animales acuáticos, terrestres y aéreos fascinantes.</p>
+<h2 class="mb-4">Animales Exóticos</h2>
+<p>El reino animal es asombroso. Aquí encontrarás algunos animales acuáticos, terrestres y aéreos fascinantes, conocidos por su rareza, belleza o hábitats únicos.</p>
 
-<h3>Acuáticos</h3>
-<img src="{{ url_for('static', filename='img/acuatico1.jpg') }}" alt="Animal acuático 1">
-<img src="{{ url_for('static', filename='img/acuatico2.jpg') }}" alt="Animal acuático 2">
+<h3 class="mt-5">Acuáticos</h3>
 
-<h3>Terrestres</h3>
-<img src="{{ url_for('static', filename='img/terrestre1.jpg') }}" alt="Animal terrestre 1">
-<img src="{{ url_for('static', filename='img/terrestre2.jpg') }}" alt="Animal terrestre 2">
+<div class="row mb-4">
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/acuatico1.jpg') }}" alt="Pez Mandarín" class="img-fluid rounded">
+        <p><strong>Pez Mandarín:</strong> Este colorido pez habita en los arrecifes de coral del Pacífico. Es famoso por sus brillantes colores azul, naranja y verde.</p>
+    </div>
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/acuatico2.jpg') }}" alt="Axolotl" class="img-fluid rounded">
+        <p><strong>Axolotl:</strong> Originario de México, este anfibio es capaz de regenerar partes de su cuerpo y permanece en estado larval toda su vida.</p>
+    </div>
+</div>
 
-<h3>Aéreos</h3>
-<img src="{{ url_for('static', filename='img/aereo1.jpg') }}" alt="Animal aéreo 1">
-<img src="{{ url_for('static', filename='img/aereo2.jpg') }}" alt="Animal aéreo 2">
+<h3 class="mt-5">Terrestres</h3>
+
+<div class="row mb-4">
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/terrestre1.jpg') }}" alt="Okapi" class="img-fluid rounded">
+        <p><strong>Okapi:</strong> Pariente de la jirafa, el okapi vive en las selvas del Congo. Tiene un cuerpo parecido al de un caballo y patas rayadas como las de una cebra.</p>
+    </div>
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/terrestre2.jpg') }}" alt="Aye-Aye" class="img-fluid rounded">
+        <p><strong>Aye-Aye:</strong> Este lémur nocturno de Madagascar es conocido por su largo dedo medio, que usa para buscar insectos dentro de los árboles.</p>
+    </div>
+</div>
+
+<h3 class="mt-5">Aéreos</h3>
+
+<div class="row mb-4">
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/aereo1.jpg') }}" alt="Ave del Paraíso" class="img-fluid rounded">
+        <p><strong>Ave del Paraíso:</strong> Famosa por sus extravagantes plumajes y elaboradas danzas de apareamiento, habita principalmente en Nueva Guinea.</p>
+    </div>
+    <div class="col-md-6 mb-3">
+        <img src="{{ url_for('static', filename='img/aereo2.jpg') }}" alt="Quetzal" class="img-fluid rounded">
+        <p><strong>Quetzal:</strong> Este ave sagrada para los mayas y aztecas vive en bosques nubosos de América Central. Su plumaje verde y rojo es impresionante.</p>
+    </div>
+</div>
 {% endblock %}

@@ -1,11 +1,39 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<h2>Vehículos Antiguos</h2>
-<p>Descubre la historia del nacimiento de los vehículos y algunos modelos clásicos.</p>
+<h2 class="mb-4">Vehículos Antiguos</h2>
+<p class="mb-5">Descubre la historia del nacimiento de los vehículos y algunos modelos clásicos que marcaron época en la industria automotriz.</p>
 
-<img src="{{ url_for('static', filename='img/vehiculo1.jpg') }}" alt="Vehículo 1">
-<img src="{{ url_for('static', filename='img/vehiculo2.jpg') }}" alt="Vehículo 2">
-<img src="{{ url_for('static', filename='img/vehiculo3.jpg') }}" alt="Vehículo 3">
-<img src="{{ url_for('static', filename='img/vehiculo4.jpg') }}" alt="Vehículo 4">
-<img src="{{ url_for('static', filename='img/vehiculo5.jpg') }}" alt="Vehículo 5">
+<div class="row g-4">
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vehiculo1.jpg') }}" alt="Ford Model T" class="img-fluid rounded">
+        <h5 class="mt-2">1. Ford Model T (1908)</h5>
+        <p>Considerado el primer automóvil asequible para el público, el Ford T revolucionó el transporte gracias a la producción en cadena de Henry Ford. Más de 15 millones de unidades fueron fabricadas.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vehiculo2.jpg') }}" alt="Volkswagen Beetle" class="img-fluid rounded">
+        <h5 class="mt-2">2. Volkswagen Beetle (1938)</h5>
+        <p>También conocido como el "Escarabajo", este icónico automóvil alemán fue diseñado para ser económico y duradero. Con su diseño característico, se convirtió en uno de los autos más vendidos del mundo.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vehiculo3.jpg') }}" alt="Rolls-Royce Silver Ghost" class="img-fluid rounded">
+        <h5 class="mt-2">3. Rolls-Royce Silver Ghost (1906)</h5>
+        <p>Un símbolo de lujo y elegancia, este modelo británico fue famoso por su suavidad de conducción y confiabilidad, estableciendo la reputación de Rolls-Royce como fabricante de automóviles de alta gama.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vehiculo4.jpg') }}" alt="Chevrolet Bel Air" class="img-fluid rounded">
+        <h5 class="mt-2">4. Chevrolet Bel Air (1957)</h5>
+        <p>Uno de los íconos de los años 50 en Estados Unidos, el Bel Air destacaba por su diseño llamativo, alas traseras cromadas y su potente motor V8. Aún hoy es muy valorado por los coleccionistas.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vehiculo5.jpg') }}" alt="Citroën 2CV" class="img-fluid rounded">
+        <h5 class="mt-2">5. Citroën 2CV (1948)</h5>
+        <p>Diseñado para ser un coche económico, simple y capaz de circular por caminos rurales, este modelo francés es recordado por su sencillez mecánica y estilo inconfundible.</p>
+    </div>
+
+</div>
 {% endblock %}

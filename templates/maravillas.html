@@ -1,13 +1,51 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<h2>Las 7 Maravillas del Mundo</h2>
-<p>Conoce las maravillas modernas del mundo y su historia.</p>
+<h2 class="mb-4">Las 7 Maravillas del Mundo</h2>
+<p class="mb-5">Conoce las maravillas modernas del mundo y su historia.</p>
 
-<img src="{{ url_for('static', filename='img/maravilla1.jpg') }}" alt="Maravilla 1">
-<img src="{{ url_for('static', filename='img/maravilla2.jpg') }}" alt="Maravilla 2">
-<img src="{{ url_for('static', filename='img/maravilla3.jpg') }}" alt="Maravilla 3">
-<img src="{{ url_for('static', filename='img/maravilla4.jpg') }}" alt="Maravilla 4">
-<img src="{{ url_for('static', filename='img/maravilla5.jpg') }}" alt="Maravilla 5">
-<img src="{{ url_for('static', filename='img/maravilla6.jpg') }}" alt="Maravilla 6">
-<img src="{{ url_for('static', filename='img/maravilla7.jpg') }}" alt="Maravilla 7">
+<div class="row g-4">
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla1.jpg') }}" alt="Gran Muralla China" class="img-fluid rounded">
+        <h5 class="mt-2">1. Gran Muralla China (China)</h5>
+        <p>Construida a lo largo de más de 2.000 años, esta colosal muralla de más de 21,000 km fue diseñada para proteger el imperio chino de las invasiones. Es uno de los mayores logros de ingeniería del mundo antiguo.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla2.jpg') }}" alt="Petra" class="img-fluid rounded">
+        <h5 class="mt-2">2. Petra (Jordania)</h5>
+        <p>Petra fue una ciudad tallada en roca por los nabateos hace más de 2.000 años. Su famosa fachada del Tesoro y sus tumbas esculpidas en piedra hacen de este sitio un tesoro arqueológico y cultural.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla3.jpg') }}" alt="Cristo Redentor" class="img-fluid rounded">
+        <h5 class="mt-2">3. Cristo Redentor (Brasil)</h5>
+        <p>Ubicado en Río de Janeiro, este icónico monumento mide 30 metros de altura y simboliza la paz y hospitalidad del pueblo brasileño. Fue inaugurado en 1931 y se ha convertido en un símbolo global del cristianismo.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla4.jpg') }}" alt="Machu Picchu" class="img-fluid rounded">
+        <h5 class="mt-2">4. Machu Picchu (Perú)</h5>
+        <p>Esta antigua ciudad inca está ubicada en lo alto de los Andes. Fue redescubierta en 1911 y es famosa por su arquitectura, su belleza natural y su misterioso pasado como centro ceremonial o residencia real.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla5.jpg') }}" alt="Chichén Itzá" class="img-fluid rounded">
+        <h5 class="mt-2">5. Chichén Itzá (México)</h5>
+        <p>Centro político y religioso de la civilización maya, destaca por la pirámide de Kukulkán, construida con un asombroso conocimiento astronómico y matemático. Es uno de los sitios arqueológicos más visitados del mundo.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla6.jpg') }}" alt="El Coliseo" class="img-fluid rounded">
+        <h5 class="mt-2">6. El Coliseo (Italia)</h5>
+        <p>Este anfiteatro romano, ubicado en Roma, fue construido en el siglo I y podía albergar hasta 80,000 espectadores. Fue escenario de combates de gladiadores, ejecuciones públicas y espectáculos masivos del Imperio Romano.</p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/maravilla7.jpg') }}" alt="Taj Mahal" class="img-fluid rounded">
+        <h5 class="mt-2">7. Taj Mahal (India)</h5>
+        <p>Construido en el siglo XVII por el emperador Shah Jahan como mausoleo para su esposa Mumtaz Mahal, el Taj Mahal es una joya de la arquitectura mogol hecha de mármol blanco, con incrustaciones de piedras preciosas.</p>
+    </div>
+
+</div>
 {% endblock %}
