@@ -14,12 +14,14 @@
     </header>
 
     <nav class="bg-info">
-        <div class="container d-flex justify-content-center">
-            <a href="/" class="nav-link text-white px-3">Inicio</a>
-            <a href="/animales" class="nav-link text-white px-3">Animales Exóticos</a>
-            <a href="/vehiculos" class="nav-link text-white px-3">Vehículos Antiguos</a>
-            <a href="/maravillas" class="nav-link text-white px-3">Las Maravillas del Mundo</a>
-            <a href="/acerca" class="nav-link text-white px-3">Acerca de...</a>
+        <div class="container d-flex justify-content-center flex-wrap">
+            <a href="{{ url_for('inicio') }}" class="nav-link text-white px-3">Inicio</a>
+            <a href="{{ url_for('animales') }}" class="nav-link text-white px-3">Animales Exóticos</a>
+            <a href="{{ url_for('vehiculos') }}" class="nav-link text-white px-3">Vehículos Antiguos</a>
+            <a href="{{ url_for('maravillas') }}" class="nav-link text-white px-3">Las Maravillas del Mundo</a>
+            <a href="{{ url_for('acerca') }}" class="nav-link text-white px-3">Acerca de...</a>
+            <a href="{{ url_for('registro') }}" class="nav-link text-white px-3">Registrarse</a>
+            <a href="{{ url_for('login') }}" class="nav-link text-white px-3">Iniciar Sesión</a>
         </div>
     </nav>
 
@@ -30,7 +32,7 @@
     </main>
 
     <footer class="bg-secondary text-white text-center py-2 mt-4">
-        <p class="mb-0">  Plantillas</p>
+        <p class="mb-0">Plantillas</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
