@@ -1,11 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
-
 app = Flask(__name__)
-
 app.secret_key = 'una_clave_muy_secreta_123'
 
-
+correos_registrados = []
 @app.route('/')
 def inicio():
     return render_template('inicio.html')
@@ -33,14 +31,19 @@ def registro():
         password = request.form['password']
         confirm_password = request.form['confirm_password']
         gender = request.form['gender']
-        
-        if password != confirm_password:
-            flash("La contraseña no coincide", "error")
+
+        if email in correos_registrados:
+            flash("El correo electrónico ya está registrado. Intenta con otro.", "error")
             return render_template('registro.html')
-        else:
-            print(f"Registrado: {username}, Correo: {email}, Contraseña: {password}, Género: {gender}")
-            flash("Usuario registrado exitosamente", "success")
-            return redirect(url_for('inicio'))
+        if password != confirm_password:
+            flash("Las contraseñas no coinciden.", "error")
+            return render_template('registro.html')
+        
+        
+        correos_registrados.append(email)
+        flash("Registro exitoso. ¡Bienvenido/a!", "success")
+        print(f"Usuario registrado: {username} - {email}")
+        return redirect(url_for('inicio'))
     
     return render_template('registro.html')
 
@@ -49,9 +52,10 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        
-        print(f"Iniciado sesión: {username}")
-        return redirect(url_for('inicio')) 
+        print(f"Inicio de sesión de {username}")
+        flash("Inicio de sesión exitoso.", "success")
+        return redirect(url_for('inicio'))
+    
     return render_template('login.html')
 
 if __name__ == '__main__':
