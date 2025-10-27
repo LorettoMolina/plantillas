@@ -13,16 +13,24 @@
     </header>
 
     <nav class="bg-info">
-        <div class="container d-flex justify-content-center flex-wrap">
+        <div class="container d-flex justify-content-center flex-wrap align-items-center">
             <a href="{{ url_for('inicio') }}" class="nav-link text-white px-3">Inicio</a>
             <a href="{{ url_for('animales') }}" class="nav-link text-white px-3">Animales Exóticos</a>
             <a href="{{ url_for('vehiculos') }}" class="nav-link text-white px-3">Vehículos Antiguos</a>
             <a href="{{ url_for('maravillas') }}" class="nav-link text-white px-3">Las Maravillas del Mundo</a>
             <a href="{{ url_for('acerca') }}" class="nav-link text-white px-3">Acerca de...</a>
-            <a href="{{ url_for('registro') }}" class="nav-link text-white px-3">Registrarse</a>
-            <a href="{{ url_for('login') }}" class="nav-link text-white px-3">Iniciar Sesión</a>
+    
+            
+            {% if logueado %}
+                <span class="text-white px-3">Bienvenido, <strong>{{ usuario }}</strong></span>
+                <a href="{{ url_for('logout') }}" class="nav-link text-white px-3">Cerrar Sesión</a>
+            {% else %}
+                <a href="{{ url_for('registro') }}" class="nav-link text-white px-3">Registrarse</a>
+                <a href="{{ url_for('login') }}" class="nav-link text-white px-3">Iniciar Sesión</a>
+            {% endif %}
         </div>
     </nav>
+    
 
     <main class="container my-4">
         <div class="bg-white p-4 rounded shadow">
